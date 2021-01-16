@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start_motion_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/detail_activity_motion_scene"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetailActivity"
+    tools:showIn="@layout/activity_detail">
+
+    <TextView
+        android:id="@+id/title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_label"
+        android:textSize="@dimen/default_text_size"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/file_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/title_label"
+        app:layout_constraintTop_toTopOf="@+id/title_label"
+        tools:text="This is an example file name." />
+
+    <TextView
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/status_label"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintStart_toStartOf="@+id/title_label"
+        app:layout_constraintTop_toBottomOf="@+id/file_name_tv" />
+
+    <TextView
+        android:id="@+id/status_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/default_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/file_name_tv"
+        app:layout_constraintStart_toStartOf="@+id/file_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/file_name_tv"
+        tools:text="Successful" />
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:textSize="@dimen/default_text_size"
+        style="?android:attr/borderlessButtonStyle" />
+</androidx.constraintlayout.motion.widget.MotionLayout>
